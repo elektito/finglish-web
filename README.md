@@ -7,6 +7,17 @@ using the following instructions:
     $ pip install -r requirements.txt
     $ gunicorn web:app
 
-You can also use the provided Dockerfile to build a docker image.
+You can also use the provided Dockerfile to build a docker image. You
+can build the image by running something like this:
+
+    $ sudo docker build -t elektito/finglish-web .
+
+Or you can download it from Docker Hub:
+
+    $ sudo docker pull elektito/finglish-web
+
+Then run the container:
+
+    $ sudo docker run -it -p 8000:8000 --rm finglish-web
 
 [1]: https://github.com/elektito/finglish
