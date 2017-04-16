@@ -8,6 +8,8 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def root_post():
     finglish = request.form['finglish']
+    print('request:', finglish)
+
     persian = f2p(finglish)
     params = {
         'persian': persian,
